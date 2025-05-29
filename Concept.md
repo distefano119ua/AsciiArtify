@@ -27,3 +27,6 @@
 
 Так ви матимете *differentiated tool‑belt*:
 **kind** — робоча конячка; **k3d** — ракетний двигун у CI; **minikube** — резерв для «екзотики» й глибокого GPU‑дебагу.
+
+
+![hello_kind](https://github.com/user-attachments/assets/4a174c7a-87e1-4a6d-b086-6d2cfd2dfb96)
