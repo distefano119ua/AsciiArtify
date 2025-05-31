@@ -59,9 +59,3 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443 &
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 ```
 """
-
-file_path = "/mnt/data/README.md"
-with open(file_path, "w", encoding="utf-8") as f:
-    f.write(content)
-
-file_path
