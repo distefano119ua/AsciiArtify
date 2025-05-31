@@ -1,0 +1,56 @@
+app:
+  name: k8sdiy
+  version: v4
+  port: 80
+image:
+  name: denvasyliev/k8sdiy
+  tag: build-2df9a62
+api:
+  replicas: 1
+  canary: 0
+  header: ""
+  port: 8080
+ascii:
+  replicas: 1
+  canary: 0
+  header: ""
+  port: 8080
+img:
+  replicas: 1
+  canary: 0
+  header: ""
+  port: 8080
+data:
+  replicas: 1
+  port: 8080
+  svc: data
+db:
+  svc: db
+  port: 3306
+nats:
+  enable: true
+  size: 1
+  service:
+    name: nats
+    port: 4222
+ingress:
+  enable: true
+api-gateway:
+  image:
+    tag: 0.53.0
+  service:
+    type: NodePort
+redis:
+  architecture: standalone
+  auth:
+    enabled: false
+  service:
+    name: redis-headless
+mysql:
+  service:
+    name: mysql
+gateway:
+  hostname: "demo.example.com"
+  parentGateway: "eg"
+  weight: 1
+  path: /
